@@ -39,7 +39,7 @@ namespace sapkis_1
                 label1.Text = n;
                 old = false;
             }
-            else if (label1.Text.Length < 13) label1.Text += n;
+            else if (label1.Text.Length < 20) label1.Text += n;
         }
 
         public void pressed(String n, bool active)
@@ -198,6 +198,15 @@ namespace sapkis_1
         {
             label1.Text = Convert.ToString(Math.Pow(Convert.ToDouble(label1.Text), 0.5));
         }
+        private void button23_Click(object sender, EventArgs e)
+        {
+            label1.Text = "0";
+        }
+        private void button24_Click(object sender, EventArgs e)
+        {
+            label1.Text = Convert.ToString(1.0 / System.Convert.ToDouble(label1.Text));
+            old = true;
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyData)
@@ -289,6 +298,11 @@ namespace sapkis_1
                 case Keys.Back:
                     {
                         button20.PerformClick();
+                        break;
+                    }
+                case Keys.Enter:
+                    {
+                        button12.PerformClick();
                         break;
                     }
 
