@@ -185,14 +185,11 @@ namespace sapkis_1
             old =true;
             c = '/';
         }
-
-
         private void button20_Click(object sender, EventArgs e)
         {
             if (label1.Text.Length > 1) label1.Text = label1.Text.Remove(label1.Text.Length - 1, 1);
             else label1.Text = "0";
         }
-
         private void button21_Click(object sender, EventArgs e)
         {
             label1.Text = Convert.ToString(Math.Pow(Convert.ToDouble(label1.Text), 2));
@@ -201,10 +198,101 @@ namespace sapkis_1
         {
             label1.Text = Convert.ToString(Math.Pow(Convert.ToDouble(label1.Text), 0.5));
         }
-        //Добавить вывод выражений
-        //Залить на гит
-        //Нажатие кнопок с клавиутуры
-        //Переработать последовательное выполнение действий
-        //Убрать заглушки
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyData)
+            {
+                case Keys.D0:
+                case Keys.NumPad0: {
+                        button10.PerformClick();
+                        break;
+                    };
+                case Keys.D1 :
+                case Keys.NumPad1:
+                    {
+                        button1.PerformClick();
+                        break;
+                    }
+                case Keys.D2:
+                case Keys.NumPad2:
+                    {
+                        button2.PerformClick();
+                        break;
+                    }
+                case Keys.D3:
+                case Keys.NumPad3:
+                    {
+                        button3.PerformClick();
+                        break;
+                    }
+                case Keys.D4:
+                case Keys.NumPad4:
+                    {
+                        button4.PerformClick();
+                        break;
+                    }
+                case Keys.D5:
+                case Keys.NumPad5:
+                    {
+                        button5.PerformClick();
+                        break;
+                    }
+                case Keys.D6:
+                case Keys.NumPad6:
+                    {
+                        button6.PerformClick();
+                        break;
+                    }
+                case Keys.D7:
+                case Keys.NumPad7:
+                    {
+                        button7.PerformClick();
+                        break;
+                    }
+                case Keys.D8:
+                case Keys.NumPad8:
+                    {
+                        button8.PerformClick();
+                        break;
+                    }
+                case Keys.D9:
+                case Keys.NumPad9:
+                    {
+                        button9.PerformClick();
+                        break;
+                    }
+                case Keys.Decimal:
+                    {
+                        button11.PerformClick();
+                        break;
+                    }
+                case Keys.Add:
+                    {
+                        button13.PerformClick();
+                        break;
+                    }
+                case Keys.Subtract:
+                    {
+                        button14.PerformClick();
+                        break;
+                    }
+                case Keys.Multiply:
+                    {
+                        button15.PerformClick();
+                        break;
+                    }
+                case Keys.Divide:
+                    {
+                        button16.PerformClick();
+                        break;
+                    }
+                case Keys.Back:
+                    {
+                        button20.PerformClick();
+                        break;
+                    }
+
+            }
+        }
     }
 }
